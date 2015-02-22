@@ -23,7 +23,7 @@ SENDING MESSAGES - USAGE ON THE COMMAND LINE:
 
 - <send-address> is the bitcoin address of the recipient
 - <send_amount> is the amount to send (in units of BTC)
-- <message-text> is a UTF-8 string containing the message to be sent with the transaction
+- <message-text> is the UTF-8 encoded message to be sent with the transaction
 - <testnet> should be 1 to use the bitcoin testnet, otherwise it can be omitted
 
 - Outputs an error if one occurred or the txid if sending was successful
@@ -33,7 +33,7 @@ SENDING MESSAGES - USAGE ON THE COMMAND LINE:
 php send-coinspark-message.php 149wHUMa41Xm2jnZtqgRx94uGbZD9kPXnS 0.001 'Here is some bitcoin for you.'
 php send-coinspark-message.php mzEJxCrdva57shpv62udriBBgMECmaPce4 0.001 'Here is some testnet bitcoin for you!' 1
 
-* Wait a few seconds then check http://coinsecrets.org/ to see your transaction with CoinSpark OP_RETURN.
+* Wait a few seconds then check http://coinsecrets.org/ to see your transaction.
 
 
 
@@ -46,9 +46,9 @@ RECEIVING MESSAGES - USAGE ON THE COMMAND LINE:
 - <txid> is the hexadecimal transaction ID of the transaction to be checked
 - <testnet> should be 1 to use the bitcoin testnet, otherwise it can be omitted
 
-- Outputs an error if one occurred or the message if it was successfully retrieved. If the message is
-  one piece of plain text without a filename (as created by this library) then that text will be shown.
-  Otherwise the full array of message parts will be shown, with MIME types and filenames.
+- Outputs an error if one occurred or the message if it was successfully retrieved.
+  If the message is one piece of plain text with no filename (as created by this library)
+  then that text will be shown. Otherwise the full array of message parts will be shown.
 
 * Examples:
 
@@ -67,12 +67,12 @@ SENDING MESSAGES - USAGE AS A LIBRARY:
 
 - $send_address is the bitcoin address of the recipient
 - $send_amount is the amount to send (in units of BTC)
-- $message_text a UTF-8 string containing the message to be sent with the transaction
+- $message_text is the UTF-8 encoded message to be sent with the transaction
 - $testnet is true/false whether to use the bitcoin testnet
 
 - Returns: array('error' => '[some error string]') OR array('txid' => '[sent txid]')
 
-* Wait a few seconds then check http://coinsecrets.org/ to see your transaction with CoinSpark OP_RETURN.
+* Wait a few seconds then check http://coinsecrets.org/ to see your transaction.
 
 
 
