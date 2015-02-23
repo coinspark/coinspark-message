@@ -22,7 +22,7 @@ SENDING MESSAGES - USAGE ON THE COMMAND LINE:
 * php send-coinspark-message.php <send-address> <send-amount> <message-text> <testnet (optional)>
 
 - <send-address> is the bitcoin address of the recipient
-- <send_amount> is the amount to send (in units of BTC)
+- <send-amount> is the amount to send (in units of BTC)
 - <message-text> is the UTF-8 encoded message to be sent with the transaction
 - <testnet> should be 1 to use the bitcoin testnet, otherwise it can be omitted
 
